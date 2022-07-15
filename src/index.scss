@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #00ebc7;
+  --primary-color: #994ff3;
   --secondary-color: #ff5470;
   --tertiary-color: #fde24f;
   --heading-color: #00214d;
@@ -16,4 +16,5 @@
 
 body {
   font-family: 'Nunito', sans-serif;
+  color: var(--text-color);
 }
