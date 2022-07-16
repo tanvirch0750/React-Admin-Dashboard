@@ -10,35 +10,47 @@ import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
 import SettingsApplicationsIcon from '@mui/icons-material/SettingsApplications';
 import SettingsSystemDaydreamOutlinedIcon from '@mui/icons-material/SettingsSystemDaydreamOutlined';
 import StoreIcon from '@mui/icons-material/Store';
+import { Link } from 'react-router-dom';
 import './Sidebar.scss';
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">TanvirAdmin</span>
+        <Link to="/">
+          <span className="logo">TanvirAdmin</span>
+        </Link>
       </div>
       <hr />
       <div className="center">
         <ul>
           <p className="title">Main</p>
-          <li>
-            <DashboardIcon classnName="icon" />
-            <span>Dashboard</span>
-          </li>
+          <Link to="/">
+            <li>
+              <DashboardIcon classnName="icon" />
+              <span>Dashboard</span>
+            </li>
+          </Link>
+
           <p className="title">Lists</p>
-          <li>
-            <PersonOutlineIcon classnName="icon" />
-            <span>Users</span>
-          </li>
-          <li>
-            <StoreIcon classnName="icon" />
-            <span>Products</span>
-          </li>
-          <li>
-            <CreditCardIcon classnName="icon" />
-            <span>Orders</span>
-          </li>
+          <Link to="/users">
+            <li>
+              <PersonOutlineIcon classnName="icon" />
+              <span>Users</span>
+            </li>
+          </Link>
+          <Link to="/products">
+            <li>
+              <StoreIcon classnName="icon" />
+              <span>Products</span>
+            </li>
+          </Link>
+          <Link to="/orders">
+            <li>
+              <CreditCardIcon classnName="icon" />
+              <span>Orders</span>
+            </li>
+          </Link>
           <li>
             <LocalShippingIcon classnName="icon" />
             <span>Delivery</span>
