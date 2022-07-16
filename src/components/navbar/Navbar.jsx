@@ -7,8 +7,12 @@ import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import { useContext } from 'react';
+import { DarkModeContext } from '../../context/darkModeContext';
 
 const Navbar = () => {
+  const { dispatch } = useContext(DarkModeContext);
+
   return (
     <header className="navbar">
       <nav className="wrapper">
@@ -21,7 +25,7 @@ const Navbar = () => {
             <LanguageOutlinedIcon />
             English
           </div>
-          <div className="item">
+          <div className="item" onClick={() => dispatch({ type: 'TOGGLE' })}>
             <DarkModeOutlinedIcon />
           </div>
           <div className="item">
